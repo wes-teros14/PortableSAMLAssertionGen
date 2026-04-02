@@ -119,6 +119,11 @@ class SAMLAssertionApp:
         status_bar = ttk.Label(main, textvariable=self.status_var, relief="sunken", anchor="w")
         status_bar.grid(row=row, column=0, columnspan=3, sticky="ew", pady=(8, 0))
 
+        # Author label
+        row += 1
+        author = ttk.Label(main, text="Wes A.", font=("Segoe UI", 8), foreground="gray")
+        author.grid(row=row, column=2, sticky="e", pady=(2, 0))
+
     def _auto_load_properties(self):
         """Auto-load SAMLAssertion.properties if it exists in the app directory or parent."""
         app_dir = get_app_dir()
